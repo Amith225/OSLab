@@ -17,7 +17,7 @@ void main() {
   printf("No of Frames: "); scanf("%d", &m);
   
   int f[MAX];
-  for(int i = 0; i < n; i++) f[i] = -1;
+  for(int i = 0; i < m; i++) f[i] = -1;
   
   int hit, c = 0;
   printf("Frames");
