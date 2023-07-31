@@ -21,7 +21,7 @@ int** read2D(int n, int m) {
   return arr;
 }
 
-int allLow(int* avail, int* needed, int m) {
+int anyLow(int* avail, int* needed, int m) {
   for(int i = 0; i < m; i++) {
     if(needed[i] > avail[i]) return 1;
   }
@@ -50,7 +50,7 @@ void main() {
   while(1) {
     notFlag = 1;
     for(int i = 0; i < n; i++) {
-      if(done[i] == 1 || allLow(avail, need[i], m) == 1) continue;
+      if(done[i] == 1 || anyLow(avail, need[i], m) == 1) continue;
       printf(" -> P%d", i);
       add(avail, alloc[i], m);
       done[i] = 1;
